@@ -1,13 +1,21 @@
-<div class="card mb-4 shadow-sm">
-  <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=55595c&fg=eceeef&text=Thumbnail" alt="Card image cap">
+<div class="card">
+  <div class="card-header">
+    Dados da Loja
+  </div>
   <div class="card-body">
-    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-    <div class="d-flex justify-content-between align-items-center">
-      <div class="btn-group">
-        <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-        <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-      </div>
-      <small class="text-muted">9 mins</small>
+    <h5 class="card-title">Descrição</h5>
+    <p class="card-text">{{description}}</p>
+
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item d-flex justify-content-between align-items-center">Preço
+        <span class="badge badge-primary badge-pill">14</span>
+      </li>
+      <li class="list-group-item d-flex justify-content-between align-items-center">Distância
+        <span class="badge badge-primary badge-pill">14</span>
+      </li>
+    </ul>
+    <div class="card-body">
+      <a href="#" class="card-link">Ver no mapa</a>
     </div>
   </div>
 </div>

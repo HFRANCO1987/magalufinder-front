@@ -1,3 +1,9 @@
-<p>
-  stores works!
-</p>
+<div class="album py-5 bg-light">
+  <div class="container">
+    <div class="row">
+        <div class="col-md-4 mt-3" *ngFor="let store of stores">
+            <app-store [description]="store.description"></app-store>
+         </div>
+    </div>
+  </div>
+</div>
