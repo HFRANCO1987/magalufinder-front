@@ -14,12 +14,12 @@ export class StoresComponent implements OnInit {
   constructor(private storeService: StoreService) { }
 
   ngOnInit() {
-    this.storeService.listAllStores()
-      .subscribe(stores => {
-          this.stores = stores.data;
-          console.log(this.stores[0].description);
+   /* this.storeService.listAllStores()
+      .subscribe(result => {
+          //this.stores = result.data;
+          //console.log(this.stores[0].description);
         }
-      );
+      );*/
 
 
   }

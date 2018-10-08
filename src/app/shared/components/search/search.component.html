@@ -1,16 +1,21 @@
 <section class="jumbotron text-center">
   <div class="container">
     <h1 class="jumbotron-heading">Localize as lojas mais próximas com os produtos desejados.</h1>
-    <p class="lead text-muted">Utilize os campos de busca para uma melhor resultado.</p>
+    <p class="lead text-muted">Informe os campos de busca para uma melhor resultado.</p>
     <form class="mt-2 mt-md-0">
         <div class="form-row">
-            <div class="form-group col-md-6">
-              <input class="form-control form-control-lg mr-sm-2" type="text" placeholder="Informe código ou descrição do produto" aria-label="Search">
+            <div class="form-group col-md-4">
+              <input class="form-control form-control-lg mr-sm-2"
+                type="text"
+                placeholder="Código ou descrição do produto" aria-label="Search">
             </div>
-            <div class="form-group col-md-6">
-                <input class="form-control form-control-lg mr-sm-2" type="text" placeholder="Informe endereço ou CEP de sua localidade" aria-label="Search">
+            <div class="form-group col-md-8">
+                <input class="form-control form-control-lg mr-sm-2"
+                  ngx-google-places-autocomplete [options]='options' #placesRef="ngx-places" (onAddressChange)="handleAddressChange($event)"
+                  placeholder="Endereço ou CEP de sua localidade" aria-label="Search">
             </div>
       </div>
+      {{ zipCode }}
       <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Pesquisa</button>
     </form>
   </div>

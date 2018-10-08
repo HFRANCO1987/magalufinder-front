@@ -9,6 +9,7 @@ import { StoresComponent } from './shared/components/stores/stores.component';
 import { StoreComponent } from './shared/components/stores/store/store.component';
 import { FooterComponent } from './shared/components/footer/footer.component';
 import { AppRoutingModule } from './app.routing.module';
+import { GooglePlaceModule } from 'ngx-google-places-autocomplete';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { AppRoutingModule } from './app.routing.module';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    GooglePlaceModule
   ],
   providers: [],
   bootstrap: [AppComponent]

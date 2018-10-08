@@ -1,3 +1,7 @@
 .form-control::placeholder{
-  font-size: 14px;
+  font-size: 10px;
+}
+
+.form-control-lg{
+  font-size: 12px;
 }
