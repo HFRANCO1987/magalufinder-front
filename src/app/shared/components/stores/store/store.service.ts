@@ -14,7 +14,7 @@ export class StoreService {
   constructor(private http: HttpClient) { }
 
   listAllStores() : Observable<Store[]> {
-    return this.http.get(API + '/api/store/getAll').pipe(map((res) => res.data)));
+    return this.http.get(API + '/api/stores').pipe(map((res) => res.data)));
   }
 
   save(store:Store){

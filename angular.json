@@ -26,6 +26,7 @@
               "./node_modules/bootstrap/dist/css/bootstrap.min.css",
               "./node_modules/font-awesome/css/font-awesome.css",
               "./node_modules/@ng-select/ng-select/themes/default.theme.css",
+              "./node_modules/sweetalert2/dist/sweetalert2.min.css",
               "src/styles.css"
             ],
             "scripts": [
@@ -33,7 +34,8 @@
               "./src/assets/js/popper.min.js",
               "./node_modules/bootstrap/dist/js/bootstrap.min.js",
               "./src/assets/js/holder.min.js",
-              "./node_modules/@ng-select/ng-select/bundles/ng-select.umd.js"
+              "./node_modules/@ng-select/ng-select/bundles/ng-select.umd.js",
+              "./node_modules/sweetalert2/dist/sweetalert2.min.js"
             ]
           },
           "configurations": {

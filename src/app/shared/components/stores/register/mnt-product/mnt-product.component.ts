@@ -7,6 +7,7 @@ import { StoreService } from '../../store/store.service';
 import { ProductService } from '../../../stores/register/mnt-product/product.service';
 import { Store } from './../../store/store.models';
 import { Product } from './product.models';
+import swal from 'sweetalert2';
 
 @Component({
   selector: 'app-mnt-product',
@@ -29,7 +30,9 @@ export class MntProductComponent implements OnInit {
   public save(){
     this.product.stores = this.selectedStores;
     this.productService.save(this.product).subscribe(result => {
-      console.log(result);
+      swal('Aviso', result.message, 'success');
+      this.product = {};
+      this.selectedStores = [];
     });
   }
 

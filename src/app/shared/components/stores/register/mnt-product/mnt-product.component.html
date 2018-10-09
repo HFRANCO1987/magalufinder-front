@@ -2,22 +2,22 @@
     <div class="container">
       <form #loginForm="ngForm">
         <div class="form-group col-md-10 text-center">
-          <h5 class="text-center">Manter Produto!</h5>
+          <h5 class="text-center">Manter Produto</h5>
         </div>
         <div class="form-group col-md-10 ">
-          <label>Código</label>
+          <label><span style="color:red">*</span>Código</label>
           <input type="text" class="form-control" name="codigo" [(ngModel)]="product.code" required>
         </div>
         <div class="form-group col-md-10 ">
-          <label>Descrição</label>
+          <label><span style="color:red">*</span>Descrição</label>
           <input type="text" class="form-control" name="description" [(ngModel)]="product.description" required>
         </div>
         <div class="form-group col-md-10 ">
-          <label>Valor</label>
+          <label><span style="color:red">*</span>Valor</label>
           <input type="text" class="form-control" name="value" required [(ngModel)]="product.value">
         </div>
         <div class="form-group col-md-10 ">
-            <label>Lojas</label>
+            <label><span style="color:red">*</span> Lojas</label>
             <ng-select name="store"
                     [items]="store$1 | async"
                     [multiple]="true"

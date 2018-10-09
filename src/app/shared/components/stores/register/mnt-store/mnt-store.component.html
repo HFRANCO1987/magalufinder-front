@@ -2,18 +2,18 @@
   <div class="container">
     <form [formGroup]="loginForm" novalidate>
       <div class="form-group col-md-10 text-center">
-        <h5 class="text-center">Manter Lojas!</h5>
+        <h5 class="text-center">Manter Lojas</h5>
       </div>
       <div class="form-group col-md-10">
-        <label>Código</label>
+        <label><span style="color:red">*</span> Código</label>
         <input type="text" class="form-control form-control-lg" formControlName="codigo" name="codigo">
       </div>
       <div class="form-group col-md-10">
-        <label>Descrição</label>
+        <label><span style="color:red">*</span> Descrição</label>
         <input type="text" class="form-control form-control-lg" formControlName="description" name="description">
       </div>
       <div class="form-group col-md-10">
-        <label>Cep</label>
+        <label><span style="color:red">*</span> Cep</label>
         <input type="text" class="form-control form-control-lg" formControlName="cep" name="cep">
       </div>
       <div class="form-group col-md-10 text-center">
