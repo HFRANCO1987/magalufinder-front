@@ -1,5 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-import { StoreService } from './store/store.service';
+import { Component, OnInit, Input } from '@angular/core';
 import { Store } from './store/store.models';
 
 @Component({
@@ -9,19 +8,13 @@ import { Store } from './store/store.models';
 })
 export class StoresComponent implements OnInit {
 
-  stores: Store[] = [];
+  @Input() stores:Store[] = [];
 
-  constructor(private storeService: StoreService) { }
+  constructor() { }
 
   ngOnInit() {
-   /* this.storeService.listAllStores()
-      .subscribe(result => {
-          //this.stores = result.data;
-          //console.log(this.stores[0].description);
-        }
-      );*/
-
-
   }
+
+
 
 }

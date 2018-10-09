@@ -1,9 +1,11 @@
-import { element } from 'protractor';
-import { Component, OnInit, ViewChild, DoCheck } from '@angular/core';
+import { Component, OnInit, ViewChild, DoCheck, Input, Output, EventEmitter } from '@angular/core';
 import { GooglePlaceDirective } from 'ngx-google-places-autocomplete';
 import { Address } from 'ngx-google-places-autocomplete/objects/address';
 import { AddressComponent } from 'ngx-google-places-autocomplete/objects/addressComponent';
 import { ComponentRestrictions } from 'ngx-google-places-autocomplete/objects/options/componentRestrictions';
+import { StoreService } from './../stores/store/store.service';
+import { element } from 'protractor';
+
 
 
 @Component({
@@ -15,21 +17,33 @@ export class SearchComponent implements OnInit, DoCheck {
 
   @ViewChild("placesRef") placesRef : GooglePlaceDirective;
 
-  zipCode:number;
+  @Output() searchStores = new EventEmitter();
+  @Output() clear = new EventEmitter();
+
+  zipCode:string;
+  product:string;
+  address:string;
 
   //Restrição de endereços somente do Brasil
   options = {
     componentRestrictions: {country: "BR"}
   };
 
-  constructor() { }
+  constructor(private storeService: StoreService) { }
 
   ngOnInit() {
   }
 
+  public onMountObjectSearch(){
+    this.searchStores.emit({zipCode: this.zipCode, product: this.product});
+  }
+
+  public onClear(){
+    this.clear.emit({});
+  }
+
   public handleAddressChange(address: Address) {
     this.getZipCode(address.address_components)
-    console.log(this.zipCode);
   }
 
   getZipCode(addresComponets:AddressComponent[]){

@@ -1,3 +1,4 @@
+
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
@@ -6,10 +7,12 @@ import { StoresComponent } from './shared/components/stores/stores.component';
 import { FooterComponent } from './shared/components/footer/footer.component';
 import { SearchComponent } from './shared/components/search/search.component';
 import { HeaderComponent } from './shared/components/header/header.component';
+import { ViewComponent } from './shared/components/stores/view/view.component';
+
 
 
 const routes: Routes = [
-    { path: '**', component: StoresComponent }
+    { path: '**', component: ViewComponent }
 ];
 
 @NgModule({

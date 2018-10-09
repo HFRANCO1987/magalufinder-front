@@ -11,8 +11,12 @@ export class StoreService {
 
   constructor(private http: HttpClient) { }
 
-  listAllStores() {
+  /*listAllStores() {
     return this.http.get<Store[]>(API + '/api/store/getAll');
-  }
+  }*/
 
+  listStoresByProductAddress(product:string, address:string) {
+    return this.http.get<Store[]>(API + '/api/store/search/' + product + "/" + address);
+  }
+  
 }

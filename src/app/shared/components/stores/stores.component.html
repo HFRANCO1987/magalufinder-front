@@ -2,7 +2,11 @@
   <div class="container">
     <div class="row">
         <div class="col-md-4 mt-3" *ngFor="let store of stores">
-            <app-store [description]="store.description"></app-store>
+            <app-store
+              [description]="store.description"
+              [value]="store.value"
+              [distance]="store.distance"
+              ></app-store>
          </div>
     </div>
   </div>

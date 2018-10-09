@@ -1,8 +1,9 @@
 
 export interface Store {
-  id:number;
-  description:string;
   code:number;
+  description:string;
+  cep:string;
   value:number;
-  distance:number;
+  codeProduct:number;
+  distance:string;
 }
