@@ -47,6 +47,7 @@ export class SearchComponent implements OnInit {
     //this.getZipCode(address.address_components)
   }
 
+  //deprecated
   getZipCode(addresComponets:AddressComponent[]){
     this.zipCode = null;
     for (let index = 0; index < addresComponets.length; index++) {
