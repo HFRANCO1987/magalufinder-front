@@ -1,5 +1,5 @@
 
-import { ModuleWithProviders } from '@angular/core';
+import { ModuleWithProviders, NgModule } from '@angular/core';
 
 import { Routes, RouterModule } from '@angular/router';
 
@@ -21,13 +21,13 @@ const routes: Routes = [
     { path: '', component: ViewComponent }
 ];
 
-export const routing: ModuleWithProviders = RouterModule.forRoot(routes);
+//export const routing: ModuleWithProviders = RouterModule.forRoot(routes);
 
-/*@NgModule({
+@NgModule({
     imports: [
         RouterModule.forRoot(routes)
     ],
     exports: [ RouterModule ]
 })
-export class AppRoutingModule { }*/
+export class AppRoutingModule { }
 

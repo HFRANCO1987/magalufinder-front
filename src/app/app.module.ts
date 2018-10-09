@@ -1,10 +1,9 @@
-
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { routing } from './app.routing';
 import { GooglePlaceModule } from 'ngx-google-places-autocomplete';
+import { AppRoutingModule } from './app.routing.module';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './shared/components/header/header.component';
@@ -32,7 +31,7 @@ import { MntProductComponent } from './shared/components/stores/register/mnt-pro
   ],
   imports: [
     BrowserModule,
-    routing,
+    AppRoutingModule,
     HttpClientModule,
     GooglePlaceModule,
     FormsModule,

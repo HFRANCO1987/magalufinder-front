@@ -43,7 +43,8 @@ export class SearchComponent implements OnInit {
   }
 
   public handleAddressChange(address: Address) {
-    this.getZipCode(address.address_components)
+    this.zipCode = address.formatted_address;
+    //this.getZipCode(address.address_components)
   }
 
   getZipCode(addresComponets:AddressComponent[]){
