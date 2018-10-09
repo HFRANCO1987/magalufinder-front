@@ -13,7 +13,7 @@ import { element } from 'protractor';
   templateUrl: './search.component.html',
   styleUrls: ['./search.component.css']
 })
-export class SearchComponent implements OnInit, DoCheck {
+export class SearchComponent implements OnInit {
 
   @ViewChild("placesRef") placesRef : GooglePlaceDirective;
 

@@ -1,8 +1,9 @@
+
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { AppRoutingModule } from './app.routing.module';
+import { routing } from './app.routing';
 import { GooglePlaceModule } from 'ngx-google-places-autocomplete';
 
 import { AppComponent } from './app.component';
@@ -12,6 +13,8 @@ import { StoresComponent } from './shared/components/stores/stores.component';
 import { StoreComponent } from './shared/components/stores/store/store.component';
 import { FooterComponent } from './shared/components/footer/footer.component';
 import { ViewComponent } from './shared/components/stores/view/view.component';
+import { MntStoreComponent } from './shared/components/stores/register/mnt-store/mnt-store.component';
+import { MntProductComponent } from './shared/components/stores/register/mnt-product/mnt-product.component';
 
 
 
@@ -23,11 +26,13 @@ import { ViewComponent } from './shared/components/stores/view/view.component';
     StoresComponent,
     StoreComponent,
     FooterComponent,
-    ViewComponent
+    ViewComponent,
+    MntStoreComponent,
+    MntProductComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
+    routing,
     HttpClientModule,
     GooglePlaceModule,
     FormsModule,

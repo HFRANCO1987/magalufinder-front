@@ -1,5 +1,7 @@
+
 import { StoreService } from './../store/store.service';
 import { Component, OnInit } from '@angular/core';
+import { Store } from './../store/store.models';
 
 @Component({
   selector: 'app-view',
@@ -16,11 +18,11 @@ export class ViewComponent implements OnInit {
   }
 
   public findByStores(evento){
-    this.storeService.listStoresByProductAddress(evento.product,evento.zipCode)
+   this.storeService.listStoresByProductAddress(evento.product,evento.zipCode)
       .subscribe(result => {
         this.stores = result.data;
         console.log(this.stores[0].description);
-      }
+      });
   }
 
   public clear(){
