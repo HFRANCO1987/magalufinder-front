@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
+import { NgSelectModule } from '@ng-select/ng-select';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { GooglePlaceModule } from 'ngx-google-places-autocomplete';
 import { AppRoutingModule } from './app.routing.module';
@@ -14,7 +15,6 @@ import { FooterComponent } from './shared/components/footer/footer.component';
 import { ViewComponent } from './shared/components/stores/view/view.component';
 import { MntStoreComponent } from './shared/components/stores/register/mnt-store/mnt-store.component';
 import { MntProductComponent } from './shared/components/stores/register/mnt-product/mnt-product.component';
-
 
 
 @NgModule({
@@ -35,7 +35,8 @@ import { MntProductComponent } from './shared/components/stores/register/mnt-pro
     HttpClientModule,
     GooglePlaceModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    NgSelectModule
   ],
   providers: [],
   bootstrap: [AppComponent]

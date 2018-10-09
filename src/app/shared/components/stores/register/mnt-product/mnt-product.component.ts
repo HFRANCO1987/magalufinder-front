@@ -1,5 +1,9 @@
+
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
+import { StoreService } from '../../store/store.service';
+import { Store } from './../../store/store.models';
 
 @Component({
   selector: 'app-mnt-product',
@@ -8,22 +12,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MntProductComponent implements OnInit {
 
-  loginForm: FormGroup;
 
-  constructor(private fb: FormBuilder) { }
+  store$1: Observable<Store[]>;
+  selectedStores = [];
+
+  constructor(private storeService:StoreService) { }
 
   ngOnInit() {
-    this.mountForm();
+    this.store$1 = this.storeService.listAllStores();
   }
-
-  mountForm() {
-    this.loginForm = this.fb.group({
-      codigo: ['', [Validators.required]],
-      description: ['', [Validators.required, Validators.minLength(3)]],
-      value: ['', [Validators.required]]
-    });
-  }
-
 
   public save(){
     console.log("SAVE - PRODUCT");
