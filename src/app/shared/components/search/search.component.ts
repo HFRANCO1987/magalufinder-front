@@ -44,21 +44,6 @@ export class SearchComponent implements OnInit {
 
   public handleAddressChange(address: Address) {
     this.zipCode = address.formatted_address;
-    //this.getZipCode(address.address_components)
   }
-
-  //deprecated
-  getZipCode(addresComponets:AddressComponent[]){
-    this.zipCode = null;
-    for (let index = 0; index < addresComponets.length; index++) {
-      const element = addresComponets[index];
-      if (element.types[0]=='postal_code'){
-        this.zipCode = element.long_name;
-        break;
-      }
-    }
-  }
-
-
 
 }

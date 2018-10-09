@@ -1,3 +1,4 @@
+import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +8,25 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MntProductComponent implements OnInit {
 
-  constructor() { }
+  loginForm: FormGroup;
+
+  constructor(private fb: FormBuilder) { }
 
   ngOnInit() {
+    this.mountForm();
+  }
+
+  mountForm() {
+    this.loginForm = this.fb.group({
+      codigo: ['', [Validators.required]],
+      description: ['', [Validators.required, Validators.minLength(3)]],
+      value: ['', [Validators.required]]
+    });
+  }
+
+
+  public save(){
+    console.log("SAVE - PRODUCT");
   }
 
 }

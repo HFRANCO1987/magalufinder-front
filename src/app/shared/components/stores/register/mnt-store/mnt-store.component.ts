@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-mnt-store',
@@ -7,9 +8,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MntStoreComponent implements OnInit {
 
-  constructor() { }
+  loginForm: FormGroup;
+
+  constructor(private fb: FormBuilder) { }
 
   ngOnInit() {
+    this.mountForm();
+  }
+
+  mountForm() {
+    this.loginForm = this.fb.group({
+      codigo: ['', [Validators.required]],
+      description: ['', [Validators.required, Validators.minLength(3)]],
+      cep: ['', [Validators.required, Validators.minLength(8)]]
+    });
+  }
+
+  public save(){
+    console.log("SAVE - STORE");
   }
 
 }
