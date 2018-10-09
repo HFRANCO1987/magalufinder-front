@@ -4,7 +4,7 @@ Este projeto foi gerado com [CLI Angular] (https://github.com/angular/angular-cl
 
 ## Configurando o projeto
 
-Após baixar o projeto execute **npm install**, ao finalizar o projeto já pode ser executado.
+Após baixar o projeto, entre na pasta do projeto e execute **npm install**, ao finalizar o projeto já pode ser executado.
 
 ## Executando o projeto
 
