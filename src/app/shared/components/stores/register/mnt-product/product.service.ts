@@ -2,8 +2,6 @@
 
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
-import { map, catchError } from 'rxjs/operators';
 import { Product } from './product.models';
 
 const API = 'http://localhost:8080';
@@ -15,8 +13,8 @@ export class ProductService {
 
   constructor(private http: HttpClient) { }
 
-  listAllProduct() : Observable<Product[]> {
-    return this.http.get(API + '/api/products').pipe(map((res) => res.data)));
+  listAllProduct() {
+    return this.http.get<any[]>(API + '/api/products');
   }
 
   save(product:Product){

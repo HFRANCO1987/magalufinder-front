@@ -1,8 +1,14 @@
-export interface Product {
+import { Store } from '../../store/store.models';
 
-  code:string;
-  description:string;
-  value:number;
-  stores:Store[] = [];
+export class Product {
+
+  public code: string;
+  public description: string;
+  public value: string;
+  public stores: Store[] = [];
+
+  constructor(){}
 
 }
+
+

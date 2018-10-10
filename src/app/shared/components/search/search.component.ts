@@ -43,7 +43,7 @@ export class SearchComponent implements OnInit {
   }
 
   public handleAddressChange(address: Address) {
-    this.zipCode = address.formatted_address;
+    this.zipCode = address.formatted_address.replace('.', '');
   }
 
 }

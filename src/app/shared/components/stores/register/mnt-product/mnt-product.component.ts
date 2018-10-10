@@ -17,9 +17,9 @@ import swal from 'sweetalert2';
 export class MntProductComponent implements OnInit {
 
 
-  store$1: Observable<Store[]>;
+  store$1: Observable<any>;
   selectedStores = [];
-  product:Product = {};
+  product:Product = new Product();
 
   constructor(private storeService:StoreService, private productService:ProductService) { }
 
@@ -30,8 +30,8 @@ export class MntProductComponent implements OnInit {
   public save(){
     this.product.stores = this.selectedStores;
     this.productService.save(this.product).subscribe(result => {
-      swal('Aviso', result.message, 'success');
-      this.product = {};
+      swal('Aviso', result['message'], 'success');
+      this.product = new Product();
       this.selectedStores = [];
     });
   }

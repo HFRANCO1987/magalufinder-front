@@ -2,6 +2,7 @@
 import { StoreService } from './../store/store.service';
 import { Component, OnInit } from '@angular/core';
 import { Store } from './../store/store.models';
+import swal from 'sweetalert2';
 
 @Component({
   selector: 'app-view',
@@ -10,7 +11,7 @@ import { Store } from './../store/store.models';
 })
 export class ViewComponent implements OnInit {
 
-  stores: Store[] = [];
+  stores: any = [];
 
   constructor(private storeService: StoreService) { }
 
@@ -20,12 +21,15 @@ export class ViewComponent implements OnInit {
   public findByStores(evento){
    this.storeService.listStoresByProductAddress(evento.product,evento.zipCode)
       .subscribe(result => {
-        this.stores = result.data;
-        console.log(this.stores[0].description);
+        if (result.data == null || result.data.length == 0){
+          swal('Aviso', 'Nenhuma loja foi encontrada com os dados informados!', 'warning');
+        }else{
+          this.stores = result.data;
+        }
       });
   }
 
-  public clear(){
+  public clear(evento){
     this.stores = [];
   }
 

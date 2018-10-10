@@ -1,9 +1,13 @@
 
-export interface Store {
-  code:number;
-  description:string;
-  cep:string;
-  value:number;
-  codeProduct:number;
-  distance:string;
+export class Store {
+
+  public code: string;
+  public description: string;
+  public cep: string;
+  public value: number;
+  public codeProduct: string;
+  public distance: string;
+
+  constructor(){}
+
 }
