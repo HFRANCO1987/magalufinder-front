@@ -27,4 +27,5 @@ export class StoreService {
     return this.http.get<any>(API + '/api/store/search/' + product + "/" + encodeURI(address));
   }
 
+  
 }
