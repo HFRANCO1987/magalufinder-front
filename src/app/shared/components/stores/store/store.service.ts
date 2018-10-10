@@ -4,7 +4,7 @@ import { Observable } from 'rxjs';
 import { Store } from './store.models';
 import { map, catchError } from 'rxjs/operators';
 
-const API = 'http://apps.bitmovel.com.br:8080/magalufinder';
+const API = 'http://localhost:8080';
 
 @Injectable({
   providedIn: 'root'

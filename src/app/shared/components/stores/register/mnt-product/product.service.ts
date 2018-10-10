@@ -4,7 +4,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Product } from './product.models';
 
-const API = 'http://apps.bitmovel.com.br:8080/magalufinder';
+const API = 'http://localhost:8080';
 
 @Injectable({
   providedIn: 'root'
