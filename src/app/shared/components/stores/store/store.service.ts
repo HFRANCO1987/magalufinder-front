@@ -4,7 +4,7 @@ import { Observable } from 'rxjs';
 import { Store } from './store.models';
 import { map, catchError } from 'rxjs/operators';
 
-const API = 'http://localhost:8080';
+const API = 'http://apps.bitmovel.com.br:8080/magalufinder';
 
 @Injectable({
   providedIn: 'root'
@@ -14,7 +14,7 @@ export class StoreService {
   constructor(private http: HttpClient) { }
 
   listAllStores() : Observable<any> {
-    return this.http.get(API + '/api/stores').pipe(map((res) => res.data)));
+    return this.http.get(API + '/api/stores').pipe(map(res => res['data']));
   }
 
   save(store:Store){
@@ -27,5 +27,4 @@ export class StoreService {
     return this.http.get<any>(API + '/api/store/search/' + product + "/" + encodeURI(address));
   }
 
-  
 }

@@ -14,7 +14,7 @@
       </div>
       <div class="form-group col-md-10">
         <label><span style="color:red">*</span> Cep</label>
-        <input type="text" class="form-control form-control-lg" formControlName="cep" name="cep" [(ngModel)]="store.cep">
+        <input type="text" class="form-control form-control-lg" formControlName="cep" name="cep" [textMask]="{mask: cepMask}" [(ngModel)]="store.cep">
       </div>
       <div class="form-group col-md-10 text-center">
         <button class="btn btn-outline-success my-2 my-sm-0 " type="submit" (click)="save()" [disabled]="loginForm.invalid">Gravar</button>

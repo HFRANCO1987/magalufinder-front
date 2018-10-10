@@ -14,6 +14,7 @@ export class MntStoreComponent implements OnInit {
 
   loginForm: FormGroup;
   store:Store = new Store();
+  cepMask = [/\d/, /\d/, /\d/, /\d/ , /\d/, '-', /\d/, /\d/, /\d/];
 
   constructor(private fb: FormBuilder, private storeService:StoreService) { }
 
