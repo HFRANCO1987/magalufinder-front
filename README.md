@@ -10,4 +10,6 @@ Após baixar o projeto, entre na pasta do projeto e execute **npm install**, ao 
 
 Execute **ng serve** para um servidor dev. Navegue até **http://localhost:4200/**. O aplicativo será recarregado automaticamente se você alterar qualquer um dos arquivos de origem.
 
+## Homologação
+**http://www.g2sistemas.com.br/magalufinder/**
 
